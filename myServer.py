@@ -8,10 +8,13 @@ NASIL SUNSAM
 @author: kmkarakaya
 """
 # %%
-# LOAD MODEL
+# Import Modules
 from joblib import load
+from fastapi import FastAPI, Request
+from fastapi.templating import Jinja2Templates
+import numpy as np
 
-# %%
+# %% Load Models
 def loadIRIS():
     from sklearn.datasets import load_iris
     filename="./models/myFirstSavedModel.joblib"
@@ -21,22 +24,14 @@ def loadIRIS():
     return clfUploaded, labelsNames
 
 
-# %%
-
-from fastapi import FastAPI, Request
-from fastapi.templating import Jinja2Templates
-import numpy as np
-
-
-#templates = Jinja2Templates(directory="../templates")
+# %% Run Server
 templates = Jinja2Templates(directory="./html")
-
 app = FastAPI()
-
 @app.get("/")
 async def read_root(request: Request):
     return templates.TemplateResponse("base.html", {"request": request})
-
+# %% SERVE DEMOS
+# %% IRIS
 @app.get("/iris")
 async def read_root(request: Request):
     global clfUploaded, labelsNames 
@@ -58,7 +53,9 @@ async def make_prediction(request: Request, L1:float, W1:float,
                                       "predicted": predicted,
                                       "probabilty": probabilty}  )
 
+# %% Next Demo
 
+# %% Next Demo
 
 
 
