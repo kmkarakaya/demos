@@ -1,3 +1,7 @@
+Create virtual env
+python -m venv "demoenv"
+.\demoenv\Scripts\activate demoenv
+
 pip install --upgrade pip
 
 "requirements.txt" file content:
@@ -7,6 +11,7 @@ joblib
 uvicorn
 jinja2
 scikit_learn
+tensorflow
 
 
 pip install -r .\requirements.txt

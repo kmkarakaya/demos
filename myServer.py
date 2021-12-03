@@ -17,7 +17,7 @@ import numpy as np
 # %% Load Models
 def loadIRIS():
     from sklearn.datasets import load_iris
-    filename="./models/myFirstSavedModel.joblib"
+    filename="./models/IRIS.joblib"
     clfUploaded = load(filename)
     dataSet = load_iris()
     labelsNames = list(dataSet.target_names)

@@ -4,5 +4,6 @@ joblib
 uvicorn
 jinja2
 scikit_learn
+tensorflow==2.7.0
 
 
