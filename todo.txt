@@ -1,6 +1,50 @@
-
 pip install --upgrade pip
+
+"requirements.txt" file content:
+pandas
+fastapi
+joblib
+uvicorn
+jinja2
+scikit_learn
+
+
 pip install -r .\requirements.txt
 
-Procfile
+Heroku files:
+1. "Procfile" file content: P is capital!!!
 web: uvicorn myServer:app --host=0.0.0.0 --port=${PORT:-5000}
+
+2. "runtime.txt" file content:
+python-3.10.0
+
+Local Run
+uvicorn myServer:app --reload
+
+
+Git Operations:
+1. ".gitignore" file content:
+__pycache__
+heroku
+
+2. git init
+3. git add .
+
+4. list all tracked files
+git ls-files -s
+
+5. list all staged files
+git diff --name-only --cached
+
+6. commit
+git commit -m "First"
+
+7. set branch
+git branch -M main
+
+8. New repo:
+git remote add origin https://github.com/kmkarakaya/demos.git
+
+9. push
+git push -u origin main
+
