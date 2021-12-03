@@ -11,13 +11,14 @@ NASIL SUNSAM
 # LOAD MODEL
 from joblib import load
 
-filename="./models/myFirstSavedModel.joblib"
-
-clfUploaded = load(filename)
 # %%
-from sklearn.datasets import load_iris
-dataSet = load_iris()
-labelsNames = list(dataSet.target_names)
+def loadIRIS():
+    from sklearn.datasets import load_iris
+    filename="./models/myFirstSavedModel.joblib"
+    clfUploaded = load(filename)
+    dataSet = load_iris()
+    labelsNames = list(dataSet.target_names)
+    return clfUploaded, labelsNames
 
 
 # %%
@@ -38,14 +39,14 @@ async def read_root(request: Request):
 
 @app.get("/iris")
 async def read_root(request: Request):
+    global clfUploaded, labelsNames 
+    clfUploaded, labelsNames = loadIRIS()
     return templates.TemplateResponse("iris.html", {"request": request})
-
-
-
 
 @app.get("/iris/predict")
 async def make_prediction(request: Request, L1:float, W1:float,
                           L2:float, W2:float):
+    
     testData= np.array([L1,W1,L2,W2]).reshape(-1,4)
     probalities = clfUploaded.predict_proba(testData)[0]
     predicted = np.argmax(probalities)
