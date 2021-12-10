@@ -72,7 +72,7 @@ async def read_root(request: Request):
     print(id_to_category[np.argmax(predictions[0])])
     print(id_to_category[np.argmax(predictions[1])])
 
-    return {"text":"Dün aldığım samsung telefon bugün şarj tutmuyor", "class":id_to_category[np.argmax(predictions[0])] }
+    return {"text":"Dün aldığım samsung telefon bugün şarj tutmuyor", "pred_class":id_to_category[np.argmax(predictions[0])] }
     #return templates.TemplateResponse("iris.html", {"request": request})
 
 

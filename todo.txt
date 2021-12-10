@@ -66,6 +66,24 @@ git branch -a
 git remote add [name_of_your_remote] [name_of_your_new_branch]
 git remote add main xyz
 
-14 
+14 commit
+git add .
+git commit -m "branch first commit"
+
+15 Push changes from your commit into your branch
+git push --set-upstream origin reviewClass
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 463 bytes | 463.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'reviewClass' on GitHub by visiting:
+remote:      https://github.com/kmkarakaya/demos/pull/new/reviewClass
+remote:
+To https://github.com/kmkarakaya/demos.git
+ * [new branch]      reviewClass -> reviewClass
+Branch 'reviewClass' set up to track remote branch 'reviewClass' from 'origin'.
 
 
