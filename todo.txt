@@ -91,4 +91,8 @@ git checkout main
 git merge reviewClass
 git push
 
+17 delete branch
+git branch -d reviewClass
+git push origin --delete reviewClass
+
 
