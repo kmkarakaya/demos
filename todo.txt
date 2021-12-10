@@ -70,7 +70,7 @@ git remote add main xyz
 git add .
 git commit -m "branch first commit"
 
-15 Push changes from your commit into your branch
+15 Push changes from your commit into your branch on GitHub
 git push --set-upstream origin reviewClass
 Counting objects: 3, done.
 Delta compression using up to 4 threads.
@@ -85,5 +85,10 @@ remote:
 To https://github.com/kmkarakaya/demos.git
  * [new branch]      reviewClass -> reviewClass
 Branch 'reviewClass' set up to track remote branch 'reviewClass' from 'origin'.
+
+16. merger
+git checkout main
+git merge reviewClass
+git push
 
 
