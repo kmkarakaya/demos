@@ -4,6 +4,6 @@ joblib
 uvicorn
 jinja2
 scikit_learn
-tf-nightly
+tensorflow-cpu
 
 
