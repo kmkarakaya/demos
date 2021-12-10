@@ -21,7 +21,7 @@ loaded_end_to_end_model, id_to_category = rc.load_model()
 
 
 
-# %% Load Models
+# %% Load Models...
 def loadIRIS():
     from sklearn.datasets import load_iris
     filename="./models/IRIS.joblib"
@@ -72,7 +72,7 @@ async def read_root(request: Request):
     print(id_to_category[np.argmax(predictions[0])])
     print(id_to_category[np.argmax(predictions[1])])
 
-    return {"text":"Dün aldığım samsung telefon bugün şarj tutmuyor", "pred_class":id_to_category[np.argmax(predictions[0])] }
+    return {"review":"Dün aldığım samsung telefon bugün şarj tutmuyor", "pred_class":id_to_category[np.argmax(predictions[0])] }
     #return templates.TemplateResponse("iris.html", {"request": request})
 
 

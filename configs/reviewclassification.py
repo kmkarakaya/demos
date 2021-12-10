@@ -42,6 +42,6 @@ def load_model():
         output_sequence_length=max_len,)
 
     
-    loaded_end_to_end_model = tf.keras.models.load_model(".\models\end_to_end_model")
+    loaded_end_to_end_model = tf.keras.models.load_model("./models/end_to_end_model")
     return loaded_end_to_end_model, id_to_category
 
