@@ -53,3 +53,19 @@ git remote add origin https://github.com/kmkarakaya/demos.git
 9. push
 git push -u origin main
 
+10 create branch nd switch in this branch
+git checkout -b xyz
+
+11 Push the branch on github :
+git push origin xyz
+
+12 see all the branches
+git branch -a
+
+13 Add a new remote for your branch :
+git remote add [name_of_your_remote] [name_of_your_new_branch]
+git remote add main xyz
+
+14 
+
+
